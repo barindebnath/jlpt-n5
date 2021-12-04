@@ -4,14 +4,16 @@ import Box from "@mui/system/Box";
 import Typography from "@mui/material/Typography";
 
 const CardItem = ({ title, phrase }: { title: string; phrase: string }) => {
-  return (
-    <>
-      <Typography style={{ fontSize: ".8rem" }}>{title}</Typography>
-      <Typography variant='h5' style={{ marginBottom: "1rem" }}>
-        {phrase}
-      </Typography>
-    </>
-  );
+  if (phrase) {
+    return (
+      <>
+        <Typography style={{ fontSize: ".8rem" }}>{title}</Typography>
+        <Typography variant='h5' style={{ marginBottom: "1.5rem" }}>
+          {phrase}
+        </Typography>
+      </>
+    );
+  } else return null;
 };
 
 type CardProps = {
@@ -32,11 +34,18 @@ const Card = ({ item }: CardProps) => {
 
   return (
     <BoxStyled>
-      <CardItem title='Kanji' phrase={kanji} />
-      <CardItem title='Kana' phrase={kana} />
-      <CardItem title='Romaji' phrase={romaji} />
-      <CardItem title='Discription' phrase={item.Meaning} />
-      <Typography variant='subtitle1'>{item.Type}</Typography>
+      <div style={{ flex: 1 }}>
+        <CardItem title='Kana' phrase={kana} />
+        <CardItem title='Romaji' phrase={romaji} />
+        <CardItem title='Discription' phrase={item.Meaning} />
+        <CardItem title='Kanji' phrase={kanji} />
+      </div>
+      <div>
+        <Typography style={{ fontSize: ".8rem" }} align='center'>
+          {item.Type}
+        </Typography>
+      </div>
+      <KanjiDiv></KanjiDiv>
     </BoxStyled>
   );
 };
@@ -44,8 +53,17 @@ const Card = ({ item }: CardProps) => {
 export default Card;
 
 const BoxStyled = styled(Box)`
+  position: relative;
   height: 100%;
   padding: 2rem;
   box-sizing: border-box;
   max-width: 30rem;
+  display: flex;
+  flex-direction: column;
+`;
+
+const KanjiDiv = styled("div")`
+  position: absolute;
+  bottom: 5rem;
+  right: 1rem;
 `;

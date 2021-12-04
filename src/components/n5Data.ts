@@ -96,7 +96,7 @@ const n5Data = [
     Meaning: "older sister; elder sister​",
   },
   {
-    Kanji: "? ?",
+    Kanji: "兄",
     Vocabulary: "ani あに",
     Type: "Noun",
     Meaning: "elder brother; older brother​",
@@ -312,13 +312,13 @@ const n5Data = [
     Meaning: "pork",
   },
   {
-    Kanji: "? 院",
+    Kanji: "病院",
     Vocabulary: "byouin びょういん",
     Type: "Noun",
     Meaning: "hospital",
   },
   {
-    Kanji: "? 気",
+    Kanji: "病気",
     Vocabulary: "byouki びょうき",
     Type: "Noun",
     Meaning: "illness; disease; sickness",
@@ -582,7 +582,7 @@ const n5Data = [
     Meaning: "English language",
   },
   {
-    Kanji: "?",
+    Kanji: "駅",
     Vocabulary: "eki えき",
     Type: "Noun",
     Meaning: "station",
@@ -702,7 +702,7 @@ const n5Data = [
     Meaning: "entrance",
   },
   {
-    Kanji: "? ?気",
+    Kanji: "元気",
     Vocabulary: "genki げんき",
     Type: "Noun, Adjective, な-adjective",
     Meaning: "lively; full of spirit; energetic; healthy",
@@ -774,7 +774,7 @@ const n5Data = [
     Meaning: "tooth",
   },
   {
-    Kanji: "? ?",
+    Kanji: "八",
     Vocabulary: "hachi はち",
     Type: "Noun, Numeric",
     Meaning: "eight: 8",
@@ -798,7 +798,7 @@ const n5Data = [
     Meaning: "yes; that is correct​",
   },
   {
-    Kanji: "? ?る",
+    Kanji: "入る",
     Vocabulary: "hairu はいる",
     Type: "Verb, Godan verb, Intransitive verb",
     Meaning: "to enter; to go into",
@@ -1170,13 +1170,13 @@ const n5Data = [
     Meaning: "dog",
   },
   {
-    Kanji: "? ?れる",
+    Kanji: "入れる",
     Vocabulary: "ireru いれる",
     Type: "Verb, Ichidan verb, Transitive verb",
     Meaning: "to put in; to let in; to take in; to bring in; to insert; to install",
   },
   {
-    Kanji: "? ?口",
+    Kanji: "入口",
     Vocabulary: "iriguchi いりぐち",
     Type: "Noun",
     Meaning: "entrance; entry; gate",
@@ -1188,13 +1188,13 @@ const n5Data = [
     Meaning: "colour; color",
   },
   {
-    Kanji: "色?",
+    Kanji: "色々",
     Vocabulary: "iroiro いろいろ",
     Type: "Noun, Adjective, な-adjective, Adverb",
     Meaning: "various",
   },
   {
-    Kanji: "? る",
+    Kanji: "居る",
     Vocabulary: "iru いる",
     Type: "Verb, Ichidan verb, Intransitive verb",
     Meaning: "to be, to have",
@@ -1206,7 +1206,7 @@ const n5Data = [
     Meaning: "to be needed",
   },
   {
-    Kanji: "医?",
+    Kanji: "医者",
     Vocabulary: "isha いしゃ",
     Type: "Noun",
     Meaning: "(medical) doctor; physician",
@@ -1224,7 +1224,7 @@ const n5Data = [
     Meaning: "together; at the same time; same; identical",
   },
   {
-    Kanji: "? 子",
+    Kanji: "椅子",
     Vocabulary: "isu いす",
     Type: "Noun",
     Meaning: "chair",
@@ -1417,7 +1417,7 @@ const n5Data = [
   },
   {
     Kanji: "漢字",
-    Vocabulary: "kanji かんじ",
+    Vocabulary: "kanjiかんじ",
     Type: "Noun",
     Meaning: "kanji",
   },
@@ -1794,13 +1794,13 @@ const n5Data = [
     Meaning: "police box",
   },
   {
-    Kanji: "? 茶",
+    Kanji: "紅茶",
     Vocabulary: "koucha こうちゃ",
     Type: "Noun",
     Meaning: "black tea",
   },
   {
-    Kanji: "? ?園",
+    Kanji: "公園",
     Vocabulary: "kouen こうえん",
     Type: "Noun",
     Meaning: "park",
@@ -1914,7 +1914,7 @@ const n5Data = [
     Meaning: "today; this day",
   },
   {
-    Kanji: "? ?弟",
+    Kanji: "兄弟",
     Vocabulary: "kyoudai きょうだい",
     Type: "Noun",
     Meaning: "siblings; brothers and sisters​; mate",
@@ -2022,7 +2022,7 @@ const n5Data = [
     Meaning: "straight ahead,direct",
   },
   {
-    Kanji: "? つ",
+    Kanji: "待つ",
     Vocabulary: "matsu まつ",
     Type: "Verb, Godan verb, Intransitive verb, Transitive verb",
     Meaning: "to wait​",
@@ -2184,7 +2184,7 @@ const n5Data = [
     Meaning: "once more; again",
   },
   {
-    Kanji: "? ?日",
+    Kanji: "六日",
     Vocabulary: "muika むいか",
     Type: "Noun",
     Meaning: "sixth day of the month / 6 days",
@@ -2202,7 +2202,7 @@ const n5Data = [
     Meaning: "village",
   },
   {
-    Kanji: "? ?つ",
+    Kanji: "六つ",
     Vocabulary: "muttsu むっつ",
     Type: "Noun, Numeric",
     Meaning: "six; 6",
@@ -2298,7 +2298,7 @@ const n5Data = [
     Meaning: "summer vacation; summer holiday",
   },
   {
-    Kanji: "何?",
+    Kanji: "何故",
     Vocabulary: "naze なぜ",
     Type: "Adverb",
     Meaning: "why; how",
@@ -2526,7 +2526,7 @@ const n5Data = [
     Meaning: "same",
   },
   {
-    Kanji: "お? ?",
+    Kanji: "お腹",
     Vocabulary: "onaka おなか",
     Type: "Noun",
     Meaning: "stomach",
@@ -2544,7 +2544,7 @@ const n5Data = [
     Meaning: "music",
   },
   {
-    Kanji: "お? ?さん",
+    Kanji: "お兄さん",
     Vocabulary: "oniisan おにいさん",
     Type: "Noun",
     Meaning: "older brother; elder brother; young man; buddy",
@@ -2592,7 +2592,7 @@ const n5Data = [
     Meaning: "to get off",
   },
   {
-    Kanji: "お? ?",
+    Kanji: "お酒",
     Vocabulary: "osake おさけ",
     Type: "Noun",
     Meaning: "alcohol",
@@ -2610,7 +2610,7 @@ const n5Data = [
     Meaning: "to teach",
   },
   {
-    Kanji: "? い",
+    Kanji: "遅い",
     Vocabulary: "osoi おそい",
     Type: "Adjective, い-adjective",
     Meaning: "slow; time-consuming; late",
@@ -2790,7 +2790,7 @@ const n5Data = [
     Meaning: "splendid",
   },
   {
-    Kanji: "? ?",
+    Kanji: "六",
     Vocabulary: "roku ろく",
     Type: "Noun, Numeric",
     Meaning: "six; 6",
@@ -2802,7 +2802,7 @@ const n5Data = [
     Meaning: "corridor; hallway; passageway",
   },
   {
-    Kanji: "? 行",
+    Kanji: "旅行",
     Vocabulary: "ryokou りょこう",
     Type: "Noun, Verb, Suru verb",
     Meaning: "travel; trip; journey; excursion; tour",
@@ -2844,7 +2844,7 @@ const n5Data = [
     Meaning: "fish",
   },
   {
-    Kanji: "? ?",
+    Kanji: "先",
     Vocabulary: "saki さき",
     Type: "Noun, Prefix, Suffix",
     Meaning: "previous; prior; first; earlier",
@@ -2940,19 +2940,19 @@ const n5Data = [
     Meaning: "1,000; thousand",
   },
   {
-    Kanji: "? ?月",
+    Kanji: "先月",
     Vocabulary: "sengetsu せんげつ",
     Type: "Noun",
     Meaning: "last month",
   },
   {
-    Kanji: "? ?生",
+    Kanji: "先生",
     Vocabulary: "sensei せんせい",
     Type: "Noun, Suffix",
     Meaning: "teacher; instructor; master",
   },
   {
-    Kanji: "? ?週",
+    Kanji: "先週",
     Vocabulary: "senshuu せんし? う",
     Type: "Noun",
     Meaning: "last week",
@@ -3414,7 +3414,7 @@ const n5Data = [
     Meaning: "time; moment; occasion; chance",
   },
   {
-    Kanji: "時?",
+    Kanji: "時々",
     Vocabulary: "tokidoki ときどき",
     Type: "Noun, Adverb",
     Meaning: "sometimes; at times",
@@ -3588,7 +3588,7 @@ const n5Data = [
     Meaning: "to sell",
   },
   {
-    Kanji: "? ?い",
+    Kanji: "煩い",
     Vocabulary: "urusai うるさい",
     Type: "い-adjective",
     Meaning: "noisy, annoying",
@@ -3678,7 +3678,7 @@ const n5Data = [
     Meaning: "mountain; hill",
   },
   {
-    Kanji: "? ?百屋",
+    Kanji: "八百屋",
     Vocabulary: "yaoya やおや",
     Type: "Noun",
     Meaning: "greengrocer; fruit and vegetable shop; versatile",
@@ -3720,7 +3720,7 @@ const n5Data = [
     Meaning: "to be absent; to take a day off; to rest",
   },
   {
-    Kanji: "? ?つ",
+    Kanji: "八つ",
     Vocabulary: "yattsu やっつ",
     Type: "Noun, Numeric",
     Meaning: "eight: 8",
@@ -3780,7 +3780,7 @@ const n5Data = [
     Meaning: "western clothes",
   },
   {
-    Kanji: "? ?日",
+    Kanji: "八日",
     Vocabulary: "youka ようか",
     Type: "Noun",
     Meaning: "eighth day of the month / 8 days",
@@ -3840,7 +3840,7 @@ const n5Data = [
     Meaning: "magazine",
   },
   {
-    Kanji: "? ?部",
+    Kanji: "全部",
     Vocabulary: "zenbu ぜんぶ",
     Type: "Noun, Adverbial Noun",
     Meaning: "all",
