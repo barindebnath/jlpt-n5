@@ -20,8 +20,8 @@ import n5Data from "./components/n5Data";
 import Settings from "./components/Settings";
 
 const App = () => {
-  const [currentCard, setCurrentCard] = useState(0);
-  const [bookmark, setBookmark] = useState(0);
+  const [currentCard, setCurrentCard] = useState<number>(0);
+  const [bookmark, setBookmark] = useState<number>(0);
   const [kanaRomaji, setKanaRomaji] = useState<"kana" | "romaji">("kana");
   const [goToCard, setGoToCard] = useState<string>("");
   const [anchorEl, setAnchorEl] = useState<HTMLButtonElement | null>(null);
@@ -39,7 +39,7 @@ const App = () => {
 
   const handleGoToCard = () => {
     const goTo = parseInt(goToCard);
-    goTo && goTo > 0 && goTo < n5Data.length && setCurrentCard(goTo - 1);
+    goTo && goTo > 0 && goTo <= n5Data.length && setCurrentCard(goTo - 1);
     setAnchorEl(null);
   };
 
@@ -48,18 +48,18 @@ const App = () => {
     value === true && (key === "kana" || key === "romaji") && setKanaRomaji(key);
   };
 
-  useEffect(() => {
-    window.addEventListener("keydown", (event) => {
-      if (event.key === "ArrowRight") setCurrentCard(currentCard + 1);
-      if (event.key === "ArrowLeft") setCurrentCard(currentCard - 1);
-    });
-    return () => {
-      window.removeEventListener("keydown", (event) => {
-        if (event.key === "ArrowRight") setCurrentCard(currentCard + 1);
-        if (event.key === "ArrowLeft") setCurrentCard(currentCard - 1);
-      });
-    };
-  });
+  // useEffect(() => {
+  //   window.addEventListener("keydown", (event) => {
+  //     if (event.key === "ArrowRight") setCurrentCard(currentCard + 1);
+  //     if (event.key === "ArrowLeft") setCurrentCard(currentCard - 1);
+  //   });
+  //   return () => {
+  //     window.removeEventListener("keydown", (event) => {
+  //       if (event.key === "ArrowRight") setCurrentCard(currentCard + 1);
+  //       if (event.key === "ArrowLeft") setCurrentCard(currentCard - 1);
+  //     });
+  //   };
+  // });
 
   return (
     <Box style={{ transform: window.innerWidth <= 800 ? "rotate(90deg)" : "none" }}>
@@ -77,11 +77,7 @@ const App = () => {
               <ArrowCircleLeftIcon />
             </IconButton>
             <Stack flex={1}>
-              {n5Data.length &&
-                n5Data.map((item, index) => {
-                  if (currentCard !== index) return null;
-                  else return <Card item={item} key={index} showHide={showHide} kanaRomaji={kanaRomaji} />;
-                })}
+              {n5Data[currentCard] && <Card item={n5Data[currentCard]} showHide={showHide} kanaRomaji={kanaRomaji} />}
               <Stack direction='row' justifyContent='space-around'>
                 <IconButton
                   color='primary'
