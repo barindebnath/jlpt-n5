@@ -1,8 +1,8 @@
 {
   "files": {
-    "main.css": "/jlpt-n5/static/css/main.033f6f11.chunk.css",
-    "main.js": "/jlpt-n5/static/js/main.25c48e41.chunk.js",
-    "main.js.map": "/jlpt-n5/static/js/main.25c48e41.chunk.js.map",
+    "main.css": "/jlpt-n5/static/css/main.a2205442.chunk.css",
+    "main.js": "/jlpt-n5/static/js/main.8933ea02.chunk.js",
+    "main.js.map": "/jlpt-n5/static/js/main.8933ea02.chunk.js.map",
     "runtime-main.js": "/jlpt-n5/static/js/runtime-main.e2745b5e.js",
     "runtime-main.js.map": "/jlpt-n5/static/js/runtime-main.e2745b5e.js.map",
     "static/js/2.6d970fb7.chunk.js": "/jlpt-n5/static/js/2.6d970fb7.chunk.js",
@@ -12,13 +12,14 @@
     "index.html": "/jlpt-n5/index.html",
     "service-worker.js": "/jlpt-n5/service-worker.js",
     "service-worker.js.map": "/jlpt-n5/service-worker.js.map",
-    "static/css/main.033f6f11.chunk.css.map": "/jlpt-n5/static/css/main.033f6f11.chunk.css.map",
-    "static/js/2.6d970fb7.chunk.js.LICENSE.txt": "/jlpt-n5/static/js/2.6d970fb7.chunk.js.LICENSE.txt"
+    "static/css/main.a2205442.chunk.css.map": "/jlpt-n5/static/css/main.a2205442.chunk.css.map",
+    "static/js/2.6d970fb7.chunk.js.LICENSE.txt": "/jlpt-n5/static/js/2.6d970fb7.chunk.js.LICENSE.txt",
+    "static/media/index.css": "/jlpt-n5/static/media/roboto_latin.0682ca7f.woff2"
   },
   "entrypoints": [
     "static/js/runtime-main.e2745b5e.js",
     "static/js/2.6d970fb7.chunk.js",
-    "static/css/main.033f6f11.chunk.css",
-    "static/js/main.25c48e41.chunk.js"
+    "static/css/main.a2205442.chunk.css",
+    "static/js/main.8933ea02.chunk.js"
   ]
 }
