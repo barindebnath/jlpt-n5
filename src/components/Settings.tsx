@@ -14,9 +14,10 @@ type SettingsProps = {
   handleClose: () => void;
   showHide: { kanji: boolean; romaji: boolean; kana: boolean; discription: boolean; type: boolean };
   handelShowHide: (key: string, value: boolean) => void;
+  goToBookmark: () => void;
 };
 
-const Settings = ({ open, handleClose, showHide, handelShowHide }: SettingsProps) => {
+const Settings = ({ open, handleClose, showHide, handelShowHide, goToBookmark }: SettingsProps) => {
   return (
     <Modal
       open={open}
@@ -56,7 +57,9 @@ const Settings = ({ open, handleClose, showHide, handelShowHide }: SettingsProps
           />
         </FormGroup>
         <Divider />
-        <Button variant='outlined'>Open Bookmark</Button>
+        <Button variant='outlined' onClick={goToBookmark}>
+          Open Bookmark
+        </Button>
       </BoxStyled>
     </Modal>
   );

@@ -8,21 +8,12 @@ import Stack from "@mui/material/Stack";
 import VisibilityOffIcon from "@mui/icons-material/VisibilityOff";
 
 const CardItem = ({ title, phrase }: { title: string; phrase: string }) => {
-  return (
-    <div>
-      {phrase && (
-        <>
-          <Typography style={{ fontSize: ".8rem" }}>{title}</Typography>
-
-          {/* {phrase.split(";").map((item, index) => { */}
-          {/* return ( */}
-          <Typography variant='h6'>{phrase}</Typography>
-          {/* ); */}
-          {/* })} */}
-        </>
-      )}
-    </div>
-  );
+  return phrase ? (
+    <Box>
+      <Typography style={{ fontSize: ".8rem" }}>{title}</Typography>
+      <Typography variant='h6'>{phrase}</Typography>
+    </Box>
+  ) : null;
 };
 
 type CardProps = {
@@ -52,13 +43,12 @@ const Card = ({ item, showHide, kanaRomaji }: CardProps) => {
 
   return (
     <BoxStyled>
-      {showHide.type && (
-        <Typography style={{ fontSize: ".8rem" }} align='center'>
-          {item.Type}
-        </Typography>
-      )}
-
-      <div style={{ display: "flex", flexDirection: "column", flex: 1, justifyContent: "space-around" }}>
+      <div style={{ display: "flex", flexDirection: "column", flex: 1, justifyContent: "space-between" }}>
+        {showHide.type && (
+          <Typography style={{ fontSize: ".8rem" }} align='center'>
+            {item.Type}
+          </Typography>
+        )}
         <Stack direction='row' justifyContent='space-between' style={{ position: "relative", minHeight: "51px" }}>
           {overlayKanaRomaji ? (
             <Overlay onClick={() => setOverlayKanaRomaji(false)}>

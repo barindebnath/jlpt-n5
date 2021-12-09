@@ -19,6 +19,8 @@ import Card from "./components/Card";
 import n5Data from "./components/n5Data";
 import Settings from "./components/Settings";
 
+const isMobile = window.innerWidth <= 800;
+
 const App = () => {
   const [currentCard, setCurrentCard] = useState<number>(0);
   const [bookmark, setBookmark] = useState<number>(0);
@@ -160,6 +162,10 @@ const App = () => {
         handleClose={() => setOpenSettings(false)}
         showHide={showHide}
         handelShowHide={handelShowHide}
+        goToBookmark={() => {
+          setCurrentCard(bookmark);
+          setOpenSettings(false);
+        }}
         // wordComplexity={wordComplexity}
         // handleComplexity={(complexity) => setWordComplexity(complexity)}
       />
@@ -170,19 +176,19 @@ const App = () => {
 export default App;
 
 const Container = styled(Stack)(({ theme }) => ({
-  height: window.innerWidth <= 800 ? "100vw" : "100vh",
-  width: window.innerWidth <= 800 ? "100vh" : "100vw",
+  height: isMobile ? "100vw" : "100vh",
+  width: isMobile ? "100vh" : "100vw",
   backgroundColor: theme.palette.secondary.main,
   color: theme.palette.primary.main,
 }));
 
 const InnerContainer = styled(Stack)`
-  border: ${() => (window.innerWidth <= 800 ? "none" : "2px solid")};
+  border: ${() => (isMobile ? "none" : "2px solid")};
   border-radius: 1rem;
-  min-width: ${() => (window.innerWidth <= 800 ? "0" : "40rem")};
+  min-width: ${() => (isMobile ? "0" : "40rem")};
   max-width: 40rem;
-  min-height: ${() => (window.innerWidth <= 800 ? "0" : "25rem")};
+  min-height: ${() => (isMobile ? "0" : "25rem")};
   max-height: 25rem;
-  margin: ${() => (window.innerWidth <= 800 ? "auto 0" : "auto")};
+  margin: ${() => (isMobile ? "auto 0" : "auto")};
   height: 100%;
 `;
