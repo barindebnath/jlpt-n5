@@ -8,6 +8,9 @@ import Modal from "@mui/material/Modal";
 import Divider from "@mui/material/Divider";
 import Typography from "@mui/material/Typography";
 import Button from "@mui/material/Button";
+//icons
+import Brightness4Icon from "@mui/icons-material/Brightness4";
+import Brightness7Icon from "@mui/icons-material/Brightness7";
 
 type SettingsProps = {
   open: boolean;
@@ -15,9 +18,19 @@ type SettingsProps = {
   showHide: { kanji: boolean; romaji: boolean; kana: boolean; discription: boolean; type: boolean };
   handelShowHide: (key: string, value: boolean) => void;
   goToBookmark: () => void;
+  isDark: boolean;
+  toggleColorMode: () => void;
 };
 
-const Settings = ({ open, handleClose, showHide, handelShowHide, goToBookmark }: SettingsProps) => {
+const Settings = ({
+  open,
+  handleClose,
+  showHide,
+  handelShowHide,
+  goToBookmark,
+  isDark,
+  toggleColorMode,
+}: SettingsProps) => {
   return (
     <Modal
       open={open}
@@ -57,8 +70,16 @@ const Settings = ({ open, handleClose, showHide, handelShowHide, goToBookmark }:
           />
         </FormGroup>
         <Divider />
-        <Button variant='outlined' onClick={goToBookmark}>
+        <Button variant='outlined' onClick={goToBookmark} fullWidth>
           Open Bookmark
+        </Button>
+        <Button
+          variant='outlined'
+          endIcon={isDark ? <Brightness7Icon /> : <Brightness4Icon />}
+          onClick={toggleColorMode}
+          fullWidth
+        >
+          {isDark ? "Light" : "Dark"} Mode
         </Button>
       </BoxStyled>
     </Modal>
