@@ -1,13 +1,12 @@
 import styled from "styled-components";
 //mui
 import Box from "@mui/material/Box";
-import FormGroup from "@mui/material/FormGroup";
-import FormControlLabel from "@mui/material/FormControlLabel";
-import Switch from "@mui/material/Switch";
 import Modal from "@mui/material/Modal";
 import Divider from "@mui/material/Divider";
 import Typography from "@mui/material/Typography";
 import Button from "@mui/material/Button";
+import ToggleButton from "@mui/material/ToggleButton";
+import Grid from "@mui/material/Grid";
 //icons
 import Brightness4Icon from "@mui/icons-material/Brightness4";
 import Brightness7Icon from "@mui/icons-material/Brightness7";
@@ -16,10 +15,20 @@ type SettingsProps = {
   open: boolean;
   handleClose: () => void;
   showHide: { kanji: boolean; romaji: boolean; kana: boolean; discription: boolean; type: boolean };
-  handelShowHide: (key: string, value: boolean) => void;
+  handelShowHide: (key: "kanji" | "kana" | "type" | "romaji" | "discription") => void;
   goToBookmark: () => void;
   isDark: boolean;
   toggleColorMode: () => void;
+};
+
+const GridButton = ({ value, selected, onChange }: { value: string; selected: boolean; onChange: () => void }) => {
+  return (
+    <Grid item xs={6}>
+      <ToggleButton color='primary' value={value} selected={selected} onChange={onChange} fullWidth>
+        {value}
+      </ToggleButton>
+    </Grid>
+  );
 };
 
 const Settings = ({
@@ -39,37 +48,18 @@ const Settings = ({
       aria-describedby='modal-modal-description'
     >
       <BoxStyled>
-        <Typography style={{ fontSize: ".8rem" }} gutterBottom>
-          Show Hide
-        </Typography>
-        <FormGroup>
-          <FormControlLabel
-            control={<Switch checked={showHide.kana} onChange={(e) => handelShowHide("kana", e.target.checked)} />}
-            label='Kana'
+        <Grid container textAlign='center'>
+          <GridButton value='Kanji' selected={showHide.kanji} onChange={() => handelShowHide("kanji")} />
+          <GridButton value='Kana' selected={showHide.kana} onChange={() => handelShowHide("kana")} />
+          <GridButton value='Romaji' selected={showHide.romaji} onChange={() => handelShowHide("romaji")} />
+          <GridButton value='Type' selected={showHide.type} onChange={() => handelShowHide("type")} />
+          <GridButton
+            value='Discription'
+            selected={showHide.discription}
+            onChange={() => handelShowHide("discription")}
           />
-          <FormControlLabel
-            control={<Switch checked={showHide.kanji} onChange={(e) => handelShowHide("kanji", e.target.checked)} />}
-            label='Kanji'
-          />
-          <FormControlLabel
-            control={<Switch checked={showHide.romaji} onChange={(e) => handelShowHide("romaji", e.target.checked)} />}
-            label='Romaji'
-          />
-          <FormControlLabel
-            control={
-              <Switch
-                checked={showHide.discription}
-                onChange={(e) => handelShowHide("discription", e.target.checked)}
-              />
-            }
-            label='Discription'
-          />
-          <FormControlLabel
-            control={<Switch checked={showHide.type} onChange={(e) => handelShowHide("type", e.target.checked)} />}
-            label='Type'
-          />
-        </FormGroup>
-        <Divider />
+        </Grid>
+
         <Button variant='outlined' onClick={goToBookmark} fullWidth>
           Open Bookmark
         </Button>

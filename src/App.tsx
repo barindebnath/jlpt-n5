@@ -31,11 +31,11 @@ const App = () => {
   const [anchorEl, setAnchorEl] = useState<HTMLButtonElement | null>(null);
   const [openSettings, setOpenSettings] = useState(false);
   const [showHide, setShowHide] = useState({
-    kanji: localStorage.getItem("show-kanji") ? localStorage.getItem("showKanji") === "1" : true,
-    kana: localStorage.getItem("show-kana") ? localStorage.getItem("showKanji") === "1" : true,
-    romaji: localStorage.getItem("show-romaji") ? localStorage.getItem("showKanji") === "1" : true,
-    discription: localStorage.getItem("show-discription") ? localStorage.getItem("showKanji") === "1" : true,
-    type: localStorage.getItem("show-type") ? localStorage.getItem("showKanji") === "1" : true,
+    kanji: localStorage.getItem("show-kanji") ? localStorage.getItem("show-kanji") === "1" : true,
+    kana: localStorage.getItem("show-kana") ? localStorage.getItem("show-kana") === "1" : true,
+    romaji: localStorage.getItem("show-romaji") ? localStorage.getItem("show-romaji") === "1" : true,
+    discription: localStorage.getItem("show-discription") ? localStorage.getItem("show-discription") === "1" : true,
+    type: localStorage.getItem("show-type") ? localStorage.getItem("show-type") === "1" : true,
   });
 
   const isPopoverOpen = Boolean(anchorEl);
@@ -47,10 +47,10 @@ const App = () => {
     setAnchorEl(null);
   };
 
-  const handelShowHide = (key: string, value: boolean) => {
-    setShowHide({ ...showHide, [`${key}`]: value });
-    value === true && (key === "kana" || key === "romaji") && setKanaRomaji(key);
-    localStorage.setItem(`show-${key}`, value ? "1" : "0");
+  const handelShowHide = (key: "kanji" | "kana" | "type" | "romaji" | "discription") => {
+    (key === "kana" || key === "romaji") && !showHide[`${key}`] && setKanaRomaji(key);
+    localStorage.setItem(`show-${key}`, !showHide[`${key}`] ? "1" : "0");
+    setShowHide({ ...showHide, [`${key}`]: !showHide[`${key}`] });
   };
 
   const theme = createTheme({
@@ -67,19 +67,6 @@ const App = () => {
   useEffect(() => {
     localStorage.setItem("isDark", toggleDark ? "1" : "0");
   }, [toggleDark]);
-
-  // useEffect(() => {
-  //   window.addEventListener("keydown", (event) => {
-  //     if (event.key === "ArrowRight") setCurrentCard(currentCard + 1);
-  //     if (event.key === "ArrowLeft") setCurrentCard(currentCard - 1);
-  //   });
-  //   return () => {
-  //     window.removeEventListener("keydown", (event) => {
-  //       if (event.key === "ArrowRight") setCurrentCard(currentCard + 1);
-  //       if (event.key === "ArrowLeft") setCurrentCard(currentCard - 1);
-  //     });
-  //   };
-  // });
 
   return (
     <ThemeProvider theme={theme}>

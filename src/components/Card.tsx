@@ -41,6 +41,11 @@ const Card = ({ item, showHide, kanaRomaji }: CardProps) => {
     setOverlayDiscription(!showHide.discription);
   }, [showHide]);
 
+  useEffect(() => {
+    setOverlayKanaRomaji(!showHide.kana && !showHide.romaji);
+    setOverlayDiscription(!showHide.discription);
+  }, [item]);
+
   return (
     <BoxStyled>
       <div style={{ display: "flex", flexDirection: "column", flex: 1, justifyContent: "space-between" }}>
@@ -49,7 +54,7 @@ const Card = ({ item, showHide, kanaRomaji }: CardProps) => {
             {item.Type}
           </Typography>
         )}
-        <Stack direction='row' justifyContent='space-between' style={{ position: "relative", minHeight: "51px" }}>
+        <Stack direction='row' justifyContent='space-between' style={{ minHeight: "61.2px" }}>
           {overlayKanaRomaji ? (
             <Overlay onClick={() => setOverlayKanaRomaji(false)}>
               <CenterOverlayItem>
@@ -70,22 +75,23 @@ const Card = ({ item, showHide, kanaRomaji }: CardProps) => {
             </>
           )}
         </Stack>
-        <div style={{ position: "relative" }}>
-          <CardItem title='Discription' phrase={item.Meaning} />
-          {overlayDiscription && (
+        {showHide.kanji && (
+          <div style={{ minHeight: "51px" }}>
+            <CardItem title='Kanji' phrase={kanji} />
+          </div>
+        )}
+        <div style={{ minHeight: "83.2px" }}>
+          {overlayDiscription ? (
             <Overlay onClick={() => setOverlayDiscription(false)}>
               <CenterOverlayItem>
                 <VisibilityOffIcon />
                 <Typography style={{ fontSize: ".8rem" }}>Show discription</Typography>
               </CenterOverlayItem>
             </Overlay>
+          ) : (
+            <CardItem title='Discription' phrase={item.Meaning} />
           )}
         </div>
-        {showHide.kanji && (
-          <div style={{ minHeight: "51px" }}>
-            <CardItem title='Kanji' phrase={kanji} />
-          </div>
-        )}
       </div>
     </BoxStyled>
   );
@@ -104,16 +110,16 @@ const BoxStyled = styled(Box)`
 `;
 
 const Overlay = styled("div")(({ theme }) => ({
+  display: "flex",
   backgroundColor: theme.palette.secondary.main,
-  position: "absolute",
-  inset: 0,
   cursor: "pointer",
+  border: "1px solid",
+  borderRadius: ".5rem",
+  height: "100%",
+  width: "100%",
 }));
 
-const CenterOverlayItem = styled("div")(({ theme }) => ({
-  position: "absolute",
-  top: "50%",
-  left: "50%",
-  transform: "translate(-50%, -50%)",
-  textAlign: "center",
-}));
+const CenterOverlayItem = styled(Box)`
+  margin: auto;
+  text-align: center;
+`;
