@@ -757,13 +757,13 @@ const n5Data = [
   },
   {
     Kanji: "牛肉",
-    Vocabulary: "gyuuniku ぎ? うにく",
+    Vocabulary: "gyuuniku ぎゅうにく",
     Type: "Noun",
     Meaning: "beef",
   },
   {
     Kanji: "牛乳",
-    Vocabulary: "gyuunyuu ぎ? うに? う",
+    Vocabulary: "gyuunyuu ぎゅうにゅう",
     Type: "Noun",
     Meaning: "(cow's) milk",
   },
@@ -1321,13 +1321,13 @@ const n5Data = [
   },
   {
     Kanji: "授業",
-    Vocabulary: "jugyou じ? ぎょう",
+    Vocabulary: "jugyou じゅぎょう",
     Type: "Noun, Suru verb",
     Meaning: "lesson; class work",
   },
   {
     Kanji: "十",
-    Vocabulary: "juu じ? う",
+    Vocabulary: "juu じゅう",
     Type: "Noun, Numeric",
     Meaning: "ten; 10",
   },
@@ -1735,7 +1735,7 @@ const n5Data = [
   },
   {
     Kanji: "今週",
-    Vocabulary: "konshuu こんし? う",
+    Vocabulary: "konshuu こんしゅう",
     Type: "Noun",
     Meaning: "this week",
   },
@@ -1927,7 +1927,7 @@ const n5Data = [
   },
   {
     Kanji: "九",
-    Vocabulary: "kyuu き? う",
+    Vocabulary: "kyuu きゅう",
     Type: "Noun, Numeric",
     Meaning: "nine; 9",
   },
@@ -1981,7 +1981,7 @@ const n5Data = [
   },
   {
     Kanji: "毎週",
-    Vocabulary: "maishuu まいし? う",
+    Vocabulary: "maishuu まいしゅう",
     Type: "Noun",
     Meaning: "every week",
   },
@@ -2743,7 +2743,7 @@ const n5Data = [
   },
   {
     Kanji: "来週",
-    Vocabulary: "raishuu らいし? う",
+    Vocabulary: "raishuu らいしゅう",
     Type: "Noun",
     Meaning: "next week",
   },
@@ -2773,7 +2773,7 @@ const n5Data = [
   },
   {
     Kanji: "練習",
-    Vocabulary: "renshuu れんし? う",
+    Vocabulary: "renshuu れんしゅう",
     Type: "Noun, Verb, Suru verb",
     Meaning: "practice; practicing",
   },
@@ -2821,7 +2821,7 @@ const n5Data = [
   },
   {
     Kanji: "留学生",
-    Vocabulary: "ryuugakusei り? うがくせい",
+    Vocabulary: "ryuugakusei りゅうがくせい",
     Type: "Noun",
     Meaning: "overseas student; exchange student",
   },
@@ -2953,7 +2953,7 @@ const n5Data = [
   },
   {
     Kanji: "先週",
-    Vocabulary: "senshuu せんし? う",
+    Vocabulary: "senshuu せんしゅう",
     Type: "Noun",
     Meaning: "last week",
   },
@@ -3085,7 +3085,7 @@ const n5Data = [
   },
   {
     Kanji: "宿題",
-    Vocabulary: "shukudai し? くだい",
+    Vocabulary: "shukudai しゅくだい",
     Type: "Noun",
     Meaning: "homework; assignment; pending issue",
   },
@@ -3385,7 +3385,7 @@ const n5Data = [
   },
   {
     Kanji: "戸",
-    Vocabulary: "toと",
+    Vocabulary: "to と",
     Type: "Noun",
     Meaning: "Japanese style door",
   },
@@ -3565,7 +3565,7 @@ const n5Data = [
   },
   {
     Kanji: "上",
-    Vocabulary: "ueうえ",
+    Vocabulary: "ue うえ",
     Type: "Noun, Suffix",
     Meaning: "above; up; over; top; surface",
   },

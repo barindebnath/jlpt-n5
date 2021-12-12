@@ -23,13 +23,15 @@ import Settings from "./components/Settings";
 const isMobile = window.innerWidth <= 800;
 
 const App = () => {
-  const [toggleDark, setToggleDark] = useState(localStorage.getItem("isDark") === "1");
   const [currentCard, setCurrentCard] = useState<number>(parseInt(localStorage.getItem("bookmark") || "0"));
   const [bookmark, setBookmark] = useState<number>(parseInt(localStorage.getItem("bookmark") || "0"));
   const [kanaRomaji, setKanaRomaji] = useState<"kana" | "romaji">("kana");
   const [goToCard, setGoToCard] = useState<string>("");
   const [anchorEl, setAnchorEl] = useState<HTMLButtonElement | null>(null);
   const [openSettings, setOpenSettings] = useState(false);
+  const [myTheme, setMyTheme] = useState<{ primary: string; secondary: string }>(
+    JSON.parse(localStorage.getItem("my-theme") || `{\"primary\":\"#157275\",\"secondary\":\"#F0F4F4\"}`)
+  );
   const [showHide, setShowHide] = useState({
     kanji: localStorage.getItem("show-kanji") ? localStorage.getItem("show-kanji") === "1" : true,
     kana: localStorage.getItem("show-kana") ? localStorage.getItem("show-kana") === "1" : true,
@@ -55,18 +57,14 @@ const App = () => {
 
   const theme = createTheme({
     palette: {
-      primary: {
-        main: toggleDark ? "#B4B4B4" : "#157275",
-      },
-      secondary: {
-        main: toggleDark ? "#121212" : "#F0F4F4",
-      },
+      primary: { main: myTheme.primary },
+      secondary: { main: myTheme.secondary },
     },
   });
 
   useEffect(() => {
-    localStorage.setItem("isDark", toggleDark ? "1" : "0");
-  }, [toggleDark]);
+    localStorage.setItem("my-theme", JSON.stringify(myTheme));
+  }, [myTheme]);
 
   return (
     <ThemeProvider theme={theme}>
@@ -175,10 +173,8 @@ const App = () => {
             setCurrentCard(bookmark);
             setOpenSettings(false);
           }}
-          isDark={toggleDark}
-          toggleColorMode={() => setToggleDark(!toggleDark)}
-          // wordComplexity={wordComplexity}
-          // handleComplexity={(complexity) => setWordComplexity(complexity)}
+          colorMode={myTheme}
+          toggleColorMode={(newTheme) => setMyTheme(newTheme)}
         />
       </Box>
     </ThemeProvider>

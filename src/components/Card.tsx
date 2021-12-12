@@ -54,7 +54,7 @@ const Card = ({ item, showHide, kanaRomaji }: CardProps) => {
             {item.Type}
           </Typography>
         )}
-        <Stack direction='row' justifyContent='space-between' style={{ minHeight: "61.2px" }}>
+        <Stack direction='row' justifyContent='space-between' style={{ minHeight: "3.85rem" }}>
           {overlayKanaRomaji ? (
             <Overlay onClick={() => setOverlayKanaRomaji(false)}>
               <CenterOverlayItem>
@@ -80,7 +80,7 @@ const Card = ({ item, showHide, kanaRomaji }: CardProps) => {
             <CardItem title='Kanji' phrase={kanji} />
           </div>
         )}
-        <div style={{ minHeight: "83.2px" }}>
+        <div style={{ minHeight: "5.2rem" }}>
           {overlayDiscription ? (
             <Overlay onClick={() => setOverlayDiscription(false)}>
               <CenterOverlayItem>
@@ -115,7 +115,7 @@ const Overlay = styled("div")(({ theme }) => ({
   cursor: "pointer",
   border: "1px solid",
   borderRadius: ".5rem",
-  height: "100%",
+  height: "calc(100% - 2px)",
   width: "100%",
 }));
 
