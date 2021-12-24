@@ -1417,7 +1417,7 @@ const n5Data = [
   },
   {
     Kanji: "漢字",
-    Vocabulary: "kanjiかんじ",
+    Vocabulary: "kanji かんじ",
     Type: "Noun",
     Meaning: "kanji",
   },
@@ -2755,7 +2755,7 @@ const n5Data = [
   },
   {
     Kanji: "零",
-    Vocabulary: "reiれい",
+    Vocabulary: "rei れい",
     Type: "Noun",
     Meaning: "zero",
   },
